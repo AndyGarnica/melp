@@ -16,7 +16,7 @@ header{
 }
 
 .title{
-    font-size: 30px;
+    font-size: 50px;
     color: #FF344D;
     font-family: arial;
 
@@ -28,6 +28,21 @@ header{
     width: 50vw;
 }
 
-.list-rest{
+.card-rest{
     border: 1px solid salmon;
+}
+#map{
+    height: 400px;
+    width:100%;
+}
+.list-rest{
+}
+
+.melp-map{
+    width: 50%;
+    height: ;
+
+}
+main{
+    display: flex;
 }

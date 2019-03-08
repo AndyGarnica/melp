@@ -11,7 +11,7 @@
 <body>
     <header>
         <article class="title">melp</article>
-        <nav>
+        <nav class="nav-links">
             <ul>
                 <li><a href=""></a></li>
                 <li><a href="">filter</a></li>
@@ -19,17 +19,23 @@
             </ul>
         </nav>
     </header>
+    <main>
         <!-- lista de restaurantes -->
-        <section>
+        <section class="list-rest">
                 <ul class="list"></ul>
         </section>
 
         <!-- mapa -->
-        <section>
-
+        <section class="melp-map">
+            <div id="map"></div>
         </section>
+    </main>
+
 
 
     <script src="assets/js/scripts.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5E-V3OICYwVk00KjBTjWm-Rx1togYefU&callback=initMap">
+    </script>
 </body>
 </html>
