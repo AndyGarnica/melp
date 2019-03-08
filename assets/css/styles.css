@@ -1,5 +1,33 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
 
+header{
+    background-color: gray;
+    height: 100px;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space around;
+    align-items: center;
+
+}
+
+.title{
+    font-size: 30px;
+    color: #FF344D;
+    font-family: arial;
+
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    width: 50vw;
+}
+
+.list-rest{
+    border: 1px solid salmon;
 }
