@@ -1,7 +1,7 @@
-// Querys del DOM
+// Querys  DOM
 const list = document.querySelector('.list');
 
-// url de la API Datos de Restaurantes
+// url API Restaurants Dates
 const apiUrlRest = 'https://s3-us-west-2.amazonaws.com/lgoveabucket/data_melp.json';
 
 fetch(apiUrlRest)
@@ -13,6 +13,7 @@ fetch(apiUrlRest)
     .then(function(references){
         console.log(references);
         printElements(references);
+        // drawMap(references)
     })
 
     .catch(function(error){
@@ -20,26 +21,32 @@ fetch(apiUrlRest)
     })
 
 function printElements(references) {
+   
     for(let reference of references) {
+        
+        let starIcons = '';
+        for(let stars = 0; stars < reference.rating; stars++){
+            starIcons += '<i class="fas fa-star icons-js"></i>';
+
+        }
+
         list.innerHTML += `
-            <li class="card-rest">${reference.name}
-                <span>${reference.rating}</span>
-                <a>${reference.contact.site}</a>
-                <a>${reference.contact.email}</a>
-                <span>${reference.contact.phone}</span>
-                <p>${reference.address.street}</p>
-                <p>${reference.address.state}</p>
+            <li class="card-rest sty-name">${reference.name} 
+                <span class="sty-rating">${starIcons}</span>
+                <a class="sty-site">${reference.contact.site}</a>
+                <a class="sty-email">${reference.contact.email}</a>
+                <span class="sty-phone">${reference.contact.phone}</span>
+                <p class="sty-street">${reference.address.street}</p>
+                <p class="sty-state">${reference.address.state}</p>
             </li>
         `
     }
-}
-
-// SECCION MAP
-
+};
+// S E C C I O N   M A P 
 function initMap(){
     var options ={
         zoom:8,
-        center: {lat:19.4978,lng:-99.1269}
+        center: {lat:19.4400,lng:-99.1270}
     }
 
     var map = new

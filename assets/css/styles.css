@@ -1,48 +1,112 @@
+:root {
+    --primary-color: #FF344D;
+
+}
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    justify-content: space-around;
 }
 
 header{
-    background-color: gray;
+    /* background-color: gray; */
     height: 100px;
     width: 100vw;
-
+    background-color: white;
     display: flex;
     justify-content: space around;
     align-items: center;
-
+    position: fixed;
 }
 
 .title{
     font-size: 50px;
-    color: #FF344D;
+    color: var(--primary-color);
     font-family: arial;
 
 }
+.min-search{
+    font-size: 20px;
+    color: var(--primary-color);
+    display: inline-block;
+    justify-content: space-around;
+}
+button::-webkit-input-placeholder {
+    color: var(--primary-color);
 
-.nav-links{
-    list-style: none;
+  }
+  button:-moz-placeholder {
+    color: var(--primary-color);
+  }
+  button:-ms-input-placeholder {
+    color: var(--primary-color);
+  }
+  button[placeholder] {
+    color: var(--primary-color);
+  }
+  
+  button {
     display: flex;
-    width: 50vw;
-}
+    color: var(--primary-color);
+    border-radius: 15px 15px 15px 15px;
+    width: 280px;
+    padding: 10px 20px;
+    margin: 10px;
+  }
 
-.card-rest{
-    border: 1px solid salmon;
-}
-#map{
-    height: 400px;
-    width:100%;
-}
-.list-rest{
-}
 
-.melp-map{
-    width: 50%;
-    height: ;
+.icons{
+    color: var(--primary-color);
+    font-size: 40px;
+}
+.icons-js{
+    font-size: 20px;
+    color: var(--primary-color);
 
 }
 main{
     display: flex;
+    padding-top: 100px;
+    justify-content: space-between;
 }
+
+main .list-rest{
+    justify-content: flex-start;
+}
+aside .melp-map{
+    justify-content: flex-start;
+}
+.list-rest{
+    display: flex;
+}
+
+.card-rest{
+    border: 1px solid salmon;
+    display: block;
+    width: 50vw;
+
+}
+.sty-rating,
+.sty-site,
+.sty-email,
+.sty-phone,
+.sty-street,
+.sty-state {
+    display: block;
+}
+
+#map{
+    height: 500px;
+}
+
+.melp-map{
+    position: fixed;
+    margin-left:50vw;;
+    padding-top: 0px;
+    height: 500px;
+    width:50%;
+    background-size: 100%;
+}
+
